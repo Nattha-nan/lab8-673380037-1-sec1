@@ -1,4 +1,4 @@
-# Lab8_Table-Relationships_673380037-1
+# Lab8-673380037-1-sec1
 
 **วิชา:** CP353002 Principles of Software Design  
 **เรื่อง:** ความสัมพันธ์ตาราง 1:1 และ 1:N ด้วย Spring Boot + JPA + PostgreSQL  
