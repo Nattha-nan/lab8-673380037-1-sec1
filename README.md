@@ -1,7 +1,5 @@
 # Lab8_Table-Relationships_673380037-1
 
-# 🛍️ Lab 8: Table Relationships — Product Shop
-
 **วิชา:** CP353002 Principles of Software Design  
 **เรื่อง:** ความสัมพันธ์ตาราง 1:1 และ 1:N ด้วย Spring Boot + JPA + PostgreSQL  
 **รูปแบบ:** ทำเดี่ยว
