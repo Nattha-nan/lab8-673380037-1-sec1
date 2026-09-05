@@ -73,7 +73,7 @@ Product (1) ──────── (N) Review
 
 ```
 src/main/java/com/example/demo/
-├── DemoApplication.java
+├── Lab86733800371Sec1Application.java
 ├── model/
 │   ├── Product.java              ← @OneToOne → ProductDetail
 │   │                               @OneToMany → List<Review>
@@ -193,26 +193,6 @@ public class Review {
 ```
 
 ---
-
-## 🗄️ Database Setup
-
-### ติดตั้ง PostgreSQL
-
-**Windows:** https://www.postgresql.org/download/windows/ → รัน `.exe` → จำ password ของ `postgres`
-
-**macOS:**
-```bash
-brew install postgresql@16
-brew services start postgresql@16
-```
-
-### สร้าง Database
-
-```bash
-psql -U postgres
-CREATE DATABASE lab8shop;
-\q
-```
 
 ### application.properties
 
