@@ -1,15 +1,20 @@
 package com.example.lab8_6733800371_sec1.controller;
 
+import java.util.ArrayList;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+
 import com.example.lab8_6733800371_sec1.model.Product;
 import com.example.lab8_6733800371_sec1.model.ProductDetail;
 import com.example.lab8_6733800371_sec1.model.Review;
 import com.example.lab8_6733800371_sec1.service.ProductService;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-
-import java.util.ArrayList;
 
 @Controller
 @RequestMapping("/products")
@@ -60,6 +65,9 @@ public class ProductController {
         Product existing = productService.getProductById(id);
         product.setReviews(existing.getReviews() != null ? existing.getReviews() : new ArrayList<>());
 
+        if (product.getDetail() != null && existing.getDetail() != null) {
+            product.getDetail().setId(existing.getDetail().getId());
+        }
         productService.updateProduct(id, product);
         redirectAttributes.addFlashAttribute("message", "แก้ไขสินค้าเรียบร้อยแล้ว");
         return "redirect:/products";
